@@ -63,4 +63,8 @@
         <bean id="userService" class="com.example.service.impl.UserServiceImpl">
                 <constructor-arg name="userDao" ref="userDao"></constructor-arg>
         </bean>
+
+<!--        引入其他配置文件-->
+        <import resource="applicationContext-user.xml"/>
+
 </beans>

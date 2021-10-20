@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--    加载外部的properties文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+<!--    <context:property-placeholder location="classpath:druid.properties"/>-->
+
+<!--        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--            <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>-->
+<!--            <property name="url" value="jdbc:mysql://127.0.0.1:3306/db2?serverTimezone=UTC"></property>-->
+<!--            <property name="username" value="root"></property>-->
+<!--            <property name="password" value="112358"></property>-->
+<!--        </bean>-->
+
+<!--    用spring表达式获取-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/db2?serverTimezone=UTC"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="112358"></property>
+        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
     </bean>
 </beans>

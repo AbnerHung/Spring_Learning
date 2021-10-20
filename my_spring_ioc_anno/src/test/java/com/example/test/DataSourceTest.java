@@ -52,7 +52,8 @@ public class DataSourceTest {
     @Test
     //Spring容器产生数据源对象
     public void test3() throws SQLException {
-        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext app = new
+                ClassPathXmlApplicationContext("applicationContext.xml");
         DruidDataSource dataSource = (DruidDataSource) app.getBean("dataSource");
         DruidPooledConnection conn = dataSource.getConnection();
         System.out.println(conn);

@@ -25,10 +25,10 @@
         <property name="password" value="${jdbc.password}"></property>
     </bean>
 
-    <bean id="userDao" class="com.example.dao.impl.UserDaoImpl"></bean>
+<!--    <bean id="userDao" class="com.example.dao.impl.UserDaoImpl"></bean>-->
 
-    <bean id="userService" class="com.example.service.impl.UserServiceImpl">
-        <property name="userDao" ref="userDao"/>
-    </bean>
+<!--    <bean id="userService" class="com.example.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--    </bean>-->
 
 </beans>

@@ -1,0 +1,5 @@
+com\example\proxy\jdk\Target.class
+com\example\proxy\jdk\ProxyTest.class
+com\example\proxy\jdk\TargetInterface.class
+com\example\proxy\jdk\Advice.class
+com\example\proxy\jdk\ProxyTest$1.class

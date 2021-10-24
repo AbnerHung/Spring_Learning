@@ -20,7 +20,7 @@ public class DataSourceConfiguration {
     private String password;
 
     @Bean("dataSource") //Spring会将当前方法返回值，以指定名称存储到spring容器中
-    public DruidDataSource getDataSource(){
+    public DruidDataSource getDataSource() {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);

@@ -17,6 +17,11 @@ public class JdbcTemplateCrudTest {
 
     @Test
     public void testUpdate(){
+        jdbcTemplate.update("update db2.`account` set balance =? where id=?",10000,8);
+    }
 
+    @Test
+    public void testDelete(){
+        jdbcTemplate.update("delete from db2.`account` where id = ?",7);
     }
 }

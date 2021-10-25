@@ -34,4 +34,16 @@ public class JdbcTemplateCrudTest {
         List<Account> rs = jdbcTemplate.query("select * from db2.`account`", new BeanPropertyRowMapper<Account>(Account.class));
         System.out.println(rs);
     }
+
+    @Test
+    public void testQueryOne(){
+        Account account = jdbcTemplate.queryForObject("select * from db2.`account` where id=?", new BeanPropertyRowMapper<Account>(Account.class), 6);
+        System.out.println(account);
+    }
+
+    @Test
+    public void testQueryCount(){
+        Long count = jdbcTemplate.queryForObject("select count(*) from db2.`account`", Long.class);
+        System.out.println(count);
+    }
 }

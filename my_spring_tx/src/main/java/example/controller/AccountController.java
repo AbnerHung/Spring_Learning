@@ -9,7 +9,7 @@ public class AccountController {
     public static void main(String[] args) {
         ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
         AccountService accountService = app.getBean(AccountService.class);
-        accountService.transfer("zhangsan","lisi",500);
+        accountService.transfer("lisi","zhangsan",500);
     }
 
 }
